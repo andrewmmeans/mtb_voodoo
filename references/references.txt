@@ -1,0 +1,4 @@
+NMF - https://en.wikipedia.org/wiki/Non-negative_matrix_factorization
+NMF - https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html
+
+Multi-Dimensional Dynamic Time Warping - http://www.cs.ucr.edu/~eamonn/Multi-Dimensional_DTW_Journal.pdf
