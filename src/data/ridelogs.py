@@ -9,7 +9,11 @@ def extract_trail_ids_from_tag(tag):
     Returns:
         url: str
     """
-    url = tag.attrs.get('href')
+    url = ''
+    try:
+        url = tag.attrs.get('href')
+    except:
+        pass
     return url
 
 
@@ -80,6 +84,12 @@ def ride_log_summary(soup):
     return ride_log_sum_dict
 
 
+def process_single_row(row):
+    ride_date = ''
+    rider_url = ''
+    rider_name = ''
+
+
 def process_single_ridelog(soup):
     split_trail_rides = []
     
@@ -105,8 +115,8 @@ def process_single_ridelog(soup):
         trail_urls = []
         for tag in row_struct[4]:
             if type(tag) is Tag:
-                trail_id = extract_trail_ids_from_tag(tag).split('/')[-2]
-                if trail_id != 'achievements':
+                trail_id = extract_trail_ids_from_tag(tag)#.split('/')[-2]
+                if trail_id and 'achievements' not in trail_id:
                     trail_urls.append(trail_id)
         
         trails_ridden.append(trail_urls)
@@ -128,7 +138,7 @@ def get_all_ridelogs(trail_url):
     # parse max page from pagination
     max_page = int(soup.select('.pageNumbers')[0].select('a')[-1].text)
     ride_logs = []
-    ride_logs.append(process_single_ridelog(soup))
+    ride_logs = process_single_ridelog(soup)
     if max_page > 1:
         for i in range(max_page):
             nth_page = i + 1
