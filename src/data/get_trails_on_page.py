@@ -5,19 +5,57 @@ from bs4 import BeautifulSoup
 
 
 def extract_url(td):
-    return td.find('a',href=True)['href']
+    """Extracts url from html
+    
+    Args:
+        td: BeautifulSoup
+        
+    Returns:
+        url: str
+    """
+    url = td.find('a',href=True)['href']
+    return url
 
 
 def extract_text(td):
-    return td.find('a',href=True).text
+    """Extracts text from html
+    
+    Args:
+        td: BeautifulSoup
+        
+    Returns:
+        text: str
+    """
+    text = td.find('a',href=True).text
+    return text
 
 
 def extract_id(url):
+    """Extract unique ID from url
+    
+    Args:
+        url: str
+        
+    Returns:
+        trail_id: str
+    """
     trail_id = url.replace('https://www.trailforks.com/trails/','').replace('/','')
     return trail_id
 
 
 def process_table(soup: BeautifulSoup):
+    """Extract trail metadata
+    
+    Args:
+        soup: BeautifulSoup
+        
+    Yields:
+        trail_id: str,
+        trail_name: str,
+        trail_url: str,
+        region_name: str,
+        region_url: str    
+    """
     trail_name_soup = soup.tbody.find_all('td',class_='highlight')
     region_name_soup = soup.tbody.find_all('td',class_='nowrap')
     for trail, region in zip(trail_name_soup, region_name_soup):
