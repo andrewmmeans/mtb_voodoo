@@ -5,10 +5,10 @@
 With 2020 there has been a huge surge to embrace remote work. As such, more people are seeking to get outdoors and experience what nature has to offer. One of the great ways to do this is mountain biking- a cross-section of exercise and the scenic outdoors. Google trends and Alexa ranks for trailforks.com illustrates a strong demand for information about mountain bike trails. 
 
 ## More data than you would think
-Trailforks.com, mtbproject.com, singletracks.com provide detailed information for trails across the world. The trail information is augmented with user reviews, ride logs, descriptions of the trails and sometimes they include gps coordinate files of the entire trail. User-trail ridelogs for just Washington amounted to over a million data points.
+Trailforks.com, mtbproject.com, singletracks.com provide detailed information for trails across the world. The trail information is augmented with user reviews, ride logs, descriptions of the trails and sometimes they include gps coordinate files of the entire trail. User-trail ride logs for just Washington amounted to over a million data points.
 
 ## A large task
-While trailforks provides a pleathora of data, it remains largely inaccesible in a rapid-fire manner. A user can drill down by country, region, and locality, and also filter by trail features but it remains a dedicated effort. There is a huge opportunity to provide a user-aware and trail-aware recommendation for a user to find their next best ride. 
+While trailforks provides a plethora of data, it remains largely inaccessible in a rapid-fire manner. A user can drill down by country, region, and locality, and also filter by trail features but it remains a dedicated effort. There is a huge opportunity to provide a user-aware and trail-aware recommendation for a user to find their next best ride. 
 
 ## An Answer
 MTB Voodoo is simple: Give the user the power to get trails similar to ones they have liked and plan their next trip. For users who don't have ridelogs yet (the cold-start problem) trailforks is already surprisingly good at supplying users with rich "local popularity" figures which can help you find highly rated trails to hone your skills or test out a new bike.
